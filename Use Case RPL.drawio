@@ -1,0 +1,97 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Use Case SiPBarang" id="ViixWWcvNY6WS3RQcodf">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="system_boundary" parent="1" style="shape=rect;html=1;whiteSpace=wrap;verticalAlign=top;align=center;fontStyle=1;fontSize=14;fillColor=#f8f9fa;strokeColor=#6c757d;dashed=1;dashPattern=8 8;" value="Sistem Informasi Pengadaan Barang (SiPBarang)" vertex="1">
+          <mxGeometry height="740" width="600" x="260" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_staff" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#e1f5fe;strokeColor=#0288d1;" value="Staff / Unit Kerja" vertex="1">
+          <mxGeometry height="80" width="40" x="80" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_approver" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#e1f5fe;strokeColor=#0288d1;" value="Approver / Manajer" vertex="1">
+          <mxGeometry height="80" width="40" x="80" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_pengadaan" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#e1f5fe;strokeColor=#0288d1;" value="Staff Pengadaan" vertex="1">
+          <mxGeometry height="80" width="40" x="80" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_vendor" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#fff3e0;strokeColor=#f57c00;" value="Vendor / Supplier" vertex="1">
+          <mxGeometry height="80" width="40" x="1030" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_admin" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#f3e5f5;strokeColor=#7b1fa2;" value="Super Admin" vertex="1">
+          <mxGeometry height="80" width="40" x="1030" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_login" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontStyle=1;" value="Login Sistem" vertex="1">
+          <mxGeometry height="50" width="200" x="460" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_buat_pr" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;" value="Buat Purchase Request (PR)" vertex="1">
+          <mxGeometry height="50" width="200" x="460" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_verifikasi_pr" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;" value="Verifikasi &amp; Setujui PR" vertex="1">
+          <mxGeometry height="50" width="200" x="460" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_kelola_vendor_barang" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;" value="Kelola Data Vendor &amp; Barang" vertex="1">
+          <mxGeometry height="50" width="200" x="460" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_buat_po" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;" value="Buat Purchase Order (PO)" vertex="1">
+          <mxGeometry height="50" width="200" x="460" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_penerimaan_barang" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;" value="Catat Penerimaan Barang" vertex="1">
+          <mxGeometry height="50" width="200" x="460" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_konfirmasi_pengiriman" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;" value="Konfirmasi Pengiriman" vertex="1">
+          <mxGeometry height="50" width="200" x="460" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_laporan_dashboard" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;" value="Lihat Laporan &amp; Dashboard" vertex="1">
+          <mxGeometry height="50" width="200" x="460" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_kelola_akun" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;" value="Kelola Akun Pengguna" vertex="1">
+          <mxGeometry height="50" width="200" x="460" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="conn_staff_login" edge="1" parent="1" source="actor_staff" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;" target="uc_login">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn_staff_pr" edge="1" parent="1" source="actor_staff" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;" target="uc_buat_pr">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn_approver_login" edge="1" parent="1" source="actor_approver" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;" target="uc_login">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn_approver_verifikasi" edge="1" parent="1" source="actor_approver" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;" target="uc_verifikasi_pr">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn_pengadaan_login" edge="1" parent="1" source="actor_pengadaan" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;" target="uc_login">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn_pengadaan_vendor" edge="1" parent="1" source="actor_pengadaan" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;" target="uc_kelola_vendor_barang">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn_pengadaan_po" edge="1" parent="1" source="actor_pengadaan" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;" target="uc_buat_po">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn_pengadaan_penerimaan" edge="1" parent="1" source="actor_pengadaan" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;" target="uc_penerimaan_barang">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn_pengadaan_laporan" edge="1" parent="1" source="actor_pengadaan" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;" target="uc_laporan_dashboard">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn_vendor_login" edge="1" parent="1" source="actor_vendor" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=0.5;" target="uc_login">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn_vendor_konfirmasi" edge="1" parent="1" source="actor_vendor" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=0.5;" target="uc_konfirmasi_pengiriman">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn_admin_login" edge="1" parent="1" source="actor_admin" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=0.5;" target="uc_login">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn_admin_akun" edge="1" parent="1" source="actor_admin" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=0.5;" target="uc_kelola_akun">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn_admin_verifikasi" edge="1" parent="1" source="actor_admin" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=0.5;" target="uc_verifikasi_pr">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
