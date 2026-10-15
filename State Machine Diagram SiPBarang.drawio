@@ -1,0 +1,85 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="State Machine SiPBarang" id="StateMachSiPBarang01">
+    <mxGraphModel dx="1342" dy="803" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="820" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontStyle=1;fontSize=14;" value="State Machine Diagram - Status Dokumen Pengadaan (PR sampai PO Selesai)" vertex="1">
+          <mxGeometry height="30" width="620" x="300" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="s_init" parent="1" style="ellipse;html=1;fillColor=#2b2b2b;strokeColor=#2b2b2b;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="150" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="s_final1" parent="1" style="ellipse;html=1;shape=endState;fillColor=#2b2b2b;strokeColor=#2b2b2b;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="400" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="s_final2" parent="1" style="ellipse;html=1;shape=endState;fillColor=#2b2b2b;strokeColor=#2b2b2b;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="900" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="s_draft" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=25;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;" value="Draft" vertex="1">
+          <mxGeometry height="60" width="130" x="100" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="s_menunggu" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=25;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;" value="Menunggu Persetujuan" vertex="1">
+          <mxGeometry height="60" width="130" x="350" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="s_disetujui" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=25;fontSize=12;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=1.5;" value="PR Disetujui" vertex="1">
+          <mxGeometry height="60" width="130" x="600" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="s_ditolak" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=25;fontSize=12;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=1.5;" value="PR Ditolak" vertex="1">
+          <mxGeometry height="60" width="130" x="350" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="s_po" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=25;fontSize=12;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=1.5;" value="PO Terbit" vertex="1">
+          <mxGeometry height="60" width="130" x="850" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="s_dikirim" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=25;fontSize=12;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=1.5;" value="Barang Dikirim" vertex="1">
+          <mxGeometry height="60" width="130" x="850" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="s_periksa" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=25;fontSize=12;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=1.5;" value="Barang Diperiksa" vertex="1">
+          <mxGeometry height="60" width="130" x="850" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="s_retur" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=25;fontSize=12;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=1.5;" value="Retur / Kirim Ulang" vertex="1">
+          <mxGeometry height="60" width="130" x="600" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="s_terima" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=25;fontSize=12;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=1.5;" value="Barang Diterima" vertex="1">
+          <mxGeometry height="60" width="130" x="850" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="t1" edge="1" parent="1" source="s_init" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=open;endSize=10;labelBackgroundColor=#ffffff;fontSize=11;" target="s_draft" value="buatPR()&lt;br&gt;[Staff]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t2" edge="1" parent="1" source="s_draft" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=open;endSize=10;labelBackgroundColor=#ffffff;fontSize=11;" target="s_menunggu" value="submit()">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t3" edge="1" parent="1" source="s_menunggu" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=open;endSize=10;labelBackgroundColor=#ffffff;fontSize=11;" target="s_disetujui" value="approve()&lt;br&gt;[Approver]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t4" edge="1" parent="1" source="s_menunggu" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=open;endSize=10;labelBackgroundColor=#ffffff;fontSize=11;" target="s_ditolak" value="reject()&lt;br&gt;[Approver]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t5" edge="1" parent="1" source="s_ditolak" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=open;endSize=10;" target="s_final1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t6" edge="1" parent="1" source="s_disetujui" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=open;endSize=10;labelBackgroundColor=#ffffff;fontSize=11;" target="s_po" value="buatPO()&lt;br&gt;[Staff Pengadaan]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t7" edge="1" parent="1" source="s_po" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=open;endSize=10;labelBackgroundColor=#ffffff;fontSize=11;" target="s_dikirim" value="konfirmasiPengiriman()&lt;br&gt;[Vendor]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t8" edge="1" parent="1" source="s_dikirim" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=open;endSize=10;labelBackgroundColor=#ffffff;fontSize=11;" target="s_periksa" value="terimaBarang()&lt;br&gt;[Staff Pengadaan]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t9" edge="1" parent="1" source="s_periksa" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=open;endSize=10;labelBackgroundColor=#ffffff;fontSize=11;" target="s_terima" value="[barang sesuai]&lt;br&gt;catatPenerimaan()">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t10" edge="1" parent="1" source="s_periksa" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=open;endSize=10;labelBackgroundColor=#ffffff;fontSize=11;" target="s_retur" value="[barang tidak&lt;br&gt;sesuai]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t11" edge="1" parent="1" source="s_retur" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=open;endSize=10;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;fontSize=11;" target="s_dikirim" value="kirimUlang()&lt;br&gt;[Vendor]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t12" edge="1" parent="1" source="s_terima" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=open;endSize=10;labelBackgroundColor=#ffffff;fontSize=11;" target="s_final2" value="selesai">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
