@@ -1,0 +1,1 @@
+https://www.figma.com/design/vOkSiuRUKskNOexgImyFET/SiPBarang?node-id=0-1&t=VPyo3QgRR8yrVDyD-1
